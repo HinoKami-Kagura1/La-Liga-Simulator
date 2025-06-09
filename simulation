@@ -108,7 +108,7 @@ def table(teams, goals_scored, goals_conceded, goal_differences, points, games_p
     table_data = list(zip(teams, games_played, goals_scored, goals_conceded, goal_differences, points))
     table_data.sort(key=lambda x: (x[5], x[4], x[2]), reverse=True)
 
-    for rank, (team, games_played, goals_scored, goals_conceded, goal_differences, points) in (table_data, 1):
+    for rank, (team, games_played, goals_scored, goals_conceded, goal_differences, points) in enumerate(table_data, 1):
         
         print(f"{rank:<5} {team:<22} {games_played:<5} {goals_scored:<5} {goals_conceded:<5} {goal_differences:<5} {points:<4}")
 
